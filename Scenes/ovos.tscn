@@ -1,0 +1,50 @@
+[gd_scene load_steps=10 format=3 uid="uid://dhfbda6eqroxf"]
+
+[ext_resource type="Script" path="res://Script/ovos.gd" id="1_8bfj2"]
+[ext_resource type="Texture2D" uid="uid://dmo2oktjhoyfx" path="res://Assets/sprites/coisas do exemplo/hud exemplo2.png" id="2_yd0uh"]
+[ext_resource type="Texture2D" uid="uid://cub6f2k88pg24" path="res://Assets/sprites/coisas do exemplo/hud exemplo.png" id="3_ek42r"]
+[ext_resource type="Texture2D" uid="uid://cooiim17rov10" path="res://Assets/sprites/coisas do exemplo/hud exemplo1.png" id="4_yukcv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7eht"]
+atlas = ExtResource("2_yd0uh")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1f84"]
+atlas = ExtResource("3_ek42r")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bddr8"]
+atlas = ExtResource("4_yukcv")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t4ll0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7eht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1f84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bddr8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ftaby"]
+size = Vector2(10, 10)
+
+[node name="ovos" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_8bfj2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t4ll0")
+autoplay = "default"
+frame_progress = 0.828319
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ftaby")

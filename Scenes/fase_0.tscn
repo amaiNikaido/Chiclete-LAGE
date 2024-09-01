@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhahr8s5n3how"]
+
+[ext_resource type="Texture2D" uid="uid://bdjasgbfj6vlm" path="res://Assets/sprites/coisas do exemplo/fundo.png" id="1_jxi27"]
+[ext_resource type="PackedScene" uid="uid://bcmm2nm8na6tu" path="res://Scenes/jogador.tscn" id="2_5ms65"]
+[ext_resource type="PackedScene" uid="uid://q3y0m588t0b7" path="res://Scenes/hud.tscn" id="3_f1525"]
+[ext_resource type="PackedScene" uid="uid://dhfbda6eqroxf" path="res://Scenes/ovos.tscn" id="4_06h16"]
+
+[node name="fase0" type="Node2D"]
+
+[node name="Fundo" type="Sprite2D" parent="."]
+position = Vector2(50, 50)
+texture = ExtResource("1_jxi27")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_5ms65")]
+position = Vector2(51, 33)
+
+[node name="HUD" parent="." instance=ExtResource("3_f1525")]
+
+[node name="ovos" parent="." instance=ExtResource("4_06h16")]
+position = Vector2(12, 59)
+
+[node name="ovos2" parent="." instance=ExtResource("4_06h16")]
+position = Vector2(35, 83)
+
+[node name="ovos3" parent="." instance=ExtResource("4_06h16")]
+position = Vector2(69, 67)
