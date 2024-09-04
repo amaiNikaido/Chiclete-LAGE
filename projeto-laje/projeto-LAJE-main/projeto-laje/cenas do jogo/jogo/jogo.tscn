@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0js3bqgpkmu6"]
+
+[ext_resource type="PackedScene" uid="uid://cambh6ev3i203" path="res://cenas do jogo/jogador/jogador.tscn" id="1_6hyf2"]
+[ext_resource type="Texture2D" uid="uid://kx7m6yugxnbs" path="res://assets/fazenda-vista-de-cima.png" id="2_74u1f"]
+
+[node name="Jogo" type="Node2D"]
+
+[node name="Jogador" parent="." instance=ExtResource("1_6hyf2")]
+position = Vector2(663, 408)
+
+[node name="Camera2D" type="Camera2D" parent="Jogador"]
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 720
+
+[node name="Piso" type="Sprite2D" parent="."]
+position = Vector2(639.5, 359.5)
+scale = Vector2(2.50784, 1.7119)
+texture = ExtResource("2_74u1f")
