@@ -6,9 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://dhfbda6eqroxf" path="res://Scenes/ovos.tscn" id="4_06h16"]
 
 [node name="fase0" type="Node2D"]
+position = Vector2(913, 509)
 
 [node name="Fundo" type="Sprite2D" parent="."]
-position = Vector2(50.5, 28)
+position = Vector2(149, 48)
 scale = Vector2(19.15, 10.72)
 texture = ExtResource("1_jxi27")
 
@@ -25,3 +26,9 @@ position = Vector2(35, 83)
 
 [node name="ovos3" parent="." instance=ExtResource("4_06h16")]
 position = Vector2(69, 67)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
