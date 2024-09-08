@@ -15,7 +15,7 @@ func play_animacao_movimento (velocity: Vector2):
 	elif velocity.x < 0:
 		play("andando_esquerda")
 	
-	if velocity.y > 0:
+	elif velocity.y > 0:
 		play("andando_baixo")
 	elif velocity.y < 0:
 		play("andando_cima")
