@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cambh6ev3i203"]
+
+[ext_resource type="Script" path="res://cenas do jogo/jogador/jogador.gd" id="1_hspbu"]
+[ext_resource type="Texture2D" uid="uid://cp8fnyryyrus2" path="res://assets/pessoa vista de cima.png" id="1_jk6wj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtgmw"]
+size = Vector2(58, 58.5)
+
+[node name="Jogador" type="CharacterBody2D"]
+z_index = 1
+script = ExtResource("1_hspbu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.72529e-07, -0.365235)
+scale = Vector2(0.453125, 0.455275)
+texture = ExtResource("1_jk6wj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.25)
+shape = SubResource("RectangleShape2D_dtgmw")
