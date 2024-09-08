@@ -1,64 +1,28 @@
 [gd_scene load_steps=17 format=3 uid="uid://bcmm2nm8na6tu"]
 
-[ext_resource type="Texture2D" uid="uid://iwifmw1ty121" path="res://Assets/sprites/coisas do exemplo/exemplo personagem2.png" id="1_aty71"]
 [ext_resource type="Script" path="res://Script/jogador.gd" id="1_yvdgx"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sghsp"]
-atlas = ExtResource("1_aty71")
-region = Rect2(0, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s40lc"]
-atlas = ExtResource("1_aty71")
-region = Rect2(16, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xlrgo"]
-atlas = ExtResource("1_aty71")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yeyrc"]
-atlas = ExtResource("1_aty71")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fpvmi"]
-atlas = ExtResource("1_aty71")
-region = Rect2(0, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_46aou"]
-atlas = ExtResource("1_aty71")
-region = Rect2(16, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i38gb"]
-atlas = ExtResource("1_aty71")
-region = Rect2(16, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aoikl"]
-atlas = ExtResource("1_aty71")
-region = Rect2(0, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_51mwg"]
-atlas = ExtResource("1_aty71")
-region = Rect2(0, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m7fl0"]
-atlas = ExtResource("1_aty71")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wwtiy"]
-atlas = ExtResource("1_aty71")
-region = Rect2(16, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lwiii"]
-atlas = ExtResource("1_aty71")
-region = Rect2(0, 48, 16, 16)
+[ext_resource type="Texture2D" uid="uid://cn1d74uqmyqw4" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_andando_frente2.png" id="2_ygskg"]
+[ext_resource type="Texture2D" uid="uid://6lxo6b36cd24" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_andando_frente.png" id="3_njgyi"]
+[ext_resource type="Texture2D" uid="uid://cj228ctx0df7y" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_andando_costas.png" id="4_2wvat"]
+[ext_resource type="Texture2D" uid="uid://lq3tadj4opxe" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_andando_costas2.png" id="5_a82ds"]
+[ext_resource type="Texture2D" uid="uid://c8s0gr2u2sskd" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_parado_frente.png" id="5_gbbou"]
+[ext_resource type="Texture2D" uid="uid://bhimbryr2lfx1" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_andando_direita.png" id="6_47isw"]
+[ext_resource type="Texture2D" uid="uid://dpvli324gju40" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_andando_direita2.png" id="7_eru0b"]
+[ext_resource type="Texture2D" uid="uid://2ca8f65t0ehk" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_andando_esquerda2.png" id="8_604dw"]
+[ext_resource type="Texture2D" uid="uid://75l42k2t3lbq" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_andando_esquerda.png" id="9_oicn5"]
+[ext_resource type="Texture2D" uid="uid://bfqm0on4fr5vl" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_parado_costas.png" id="11_ksu6u"]
+[ext_resource type="Texture2D" uid="uid://b6opfi8mbabki" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_parado_direita.png" id="12_a5gek"]
+[ext_resource type="Texture2D" uid="uid://uivrn3blfbjr" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_parado_esquerda.png" id="13_vpyqq"]
+[ext_resource type="Script" path="res://Script/controle_animacao_jogador.gd" id="14_qykcg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5twqj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sghsp")
+"texture": ExtResource("2_ygskg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_s40lc")
+"texture": ExtResource("3_njgyi")
 }],
 "loop": true,
 "name": &"andando_baixo",
@@ -66,10 +30,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xlrgo")
+"texture": ExtResource("4_2wvat")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yeyrc")
+"texture": ExtResource("5_a82ds")
 }],
 "loop": true,
 "name": &"andando_cima",
@@ -77,10 +41,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fpvmi")
+"texture": ExtResource("6_47isw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_46aou")
+"texture": ExtResource("7_eru0b")
 }],
 "loop": true,
 "name": &"andando_direita",
@@ -88,10 +52,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i38gb")
+"texture": ExtResource("8_604dw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_aoikl")
+"texture": ExtResource("9_oicn5")
 }],
 "loop": true,
 "name": &"andando_esquerda",
@@ -99,7 +63,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_51mwg")
+"texture": ExtResource("5_gbbou")
 }],
 "loop": true,
 "name": &"parado_baixo",
@@ -107,7 +71,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m7fl0")
+"texture": ExtResource("11_ksu6u")
 }],
 "loop": true,
 "name": &"parado_cima",
@@ -115,7 +79,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wwtiy")
+"texture": ExtResource("12_a5gek")
 }],
 "loop": true,
 "name": &"parado_direita",
@@ -123,7 +87,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lwiii")
+"texture": ExtResource("13_vpyqq")
 }],
 "loop": true,
 "name": &"parado_esquerda",
@@ -131,20 +95,24 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0c2ot"]
-size = Vector2(16, 16)
+size = Vector2(160, 208)
 
 [node name="jogador" type="CharacterBody2D"]
 collision_mask = 14
 script = ExtResource("1_yvdgx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 4)
+scale = Vector2(0.257324, 0.257324)
 sprite_frames = SubResource("SpriteFrames_5twqj")
-animation = &"andando_cima"
+animation = &"andando_direita"
 autoplay = "parado_baixo"
-frame_progress = 0.871993
+frame_progress = 0.608117
+script = ExtResource("14_qykcg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_0c2ot")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)

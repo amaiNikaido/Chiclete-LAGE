@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://clhk7yqyrtbvd"]
+
+[ext_resource type="Script" path="res://Script/vaca.gd" id="1_flqgv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_43sfk"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"andando_baixo",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"andando_cima",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"andando_direira",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"andando_esquerda",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"parado_baixo",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"parado_cima",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"parado_direita",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"parado_esquerda",
+"speed": 5.0
+}]
+
+[node name="Vaca" type="CharacterBody2D"]
+script = ExtResource("1_flqgv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_43sfk")
+animation = &"andando_baixo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
