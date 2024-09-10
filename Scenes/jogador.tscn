@@ -119,7 +119,7 @@ scale = Vector2(0.257324, 0.257324)
 sprite_frames = SubResource("SpriteFrames_5twqj")
 animation = &"andando_esquerda"
 autoplay = "parado_baixo"
-frame_progress = 0.564855
+frame_progress = 0.301103
 script = ExtResource("14_qykcg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
