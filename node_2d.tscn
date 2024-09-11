@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtsgg763nw4eb"]
+
+[ext_resource type="Shader" path="res://luc.gdshader" id="1_grcto"]
+[ext_resource type="Texture2D" uid="uid://c8s0gr2u2sskd" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_parado_frente.png" id="2_ojxbe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jcd2o"]
+shader = ExtResource("1_grcto")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 0.0
+
+[sub_resource type="Animation" id="Animation_2vfvp"]
+resource_name = "flash"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/flash_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_kq2wk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/flash_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6p2t0"]
+_data = {
+"RESET": SubResource("Animation_kq2wk"),
+"flash": SubResource("Animation_2vfvp")
+}
+
+[node name="Damage Animation" type="Node2D"]
+
+[node name="LuquinhasParadoFrente" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_jcd2o")
+position = Vector2(1010, 1025)
+texture = ExtResource("2_ojxbe")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LuquinhasParadoFrente"]
+libraries = {
+"": SubResource("AnimationLibrary_6p2t0")
+}
