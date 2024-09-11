@@ -4,7 +4,7 @@ class_name Jogador
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-const SPEED = 10000.0
+const SPEED = 40000.0
 
 
 

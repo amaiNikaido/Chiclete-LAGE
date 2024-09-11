@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bcmm2nm8na6tu"]
+[gd_scene load_steps=20 format=3 uid="uid://bcmm2nm8na6tu"]
 
 [ext_resource type="Script" path="res://Script/jogador.gd" id="1_yvdgx"]
 [ext_resource type="Texture2D" uid="uid://cn1d74uqmyqw4" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_andando_frente2.png" id="2_ygskg"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b6opfi8mbabki" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_parado_direita.png" id="12_a5gek"]
 [ext_resource type="Texture2D" uid="uid://uivrn3blfbjr" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_parado_esquerda.png" id="13_vpyqq"]
 [ext_resource type="Script" path="res://Script/controle_animacao_jogador.gd" id="14_qykcg"]
+[ext_resource type="Shader" path="res://Scenes/jogador.gdshader" id="15_n5h7p"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5twqj"]
 animations = [{
@@ -109,6 +110,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0c2ot"]
 size = Vector2(160, 208)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4ioxh"]
+shader = ExtResource("15_n5h7p")
+shader_parameter/base = Color(0.025626, 0.151738, 0.271748, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fc4gf"]
+
 [node name="jogador" type="CharacterBody2D"]
 collision_mask = 14
 script = ExtResource("1_yvdgx")
@@ -130,3 +137,19 @@ shape = SubResource("RectangleShape2D_0c2ot")
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/CanvasLayer"]
+material = SubResource("ShaderMaterial_4ioxh")
+offset_left = -1.0
+offset_top = -196.0
+offset_right = 377.0
+offset_bottom = 184.0
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D/CanvasLayer"]
+material = SubResource("ShaderMaterial_fc4gf")
+offset_left = -152.0
+offset_top = -99.0
+offset_right = 147.0
+offset_bottom = 157.0

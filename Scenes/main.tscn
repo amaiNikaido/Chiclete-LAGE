@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://djoda8lteky0i"]
+[gd_scene load_steps=6 format=3 uid="uid://djoda8lteky0i"]
 
 [ext_resource type="Texture2D" uid="uid://c831efo1b0wot" path="res://Assets/sprites/Tileset/cenario.png" id="1_lq8wu"]
 [ext_resource type="Texture2D" uid="uid://bujrvuj6fkiky" path="res://Assets/sprites/Tileset/celeiro.png" id="2_2ip7f"]
 [ext_resource type="PackedScene" uid="uid://bcmm2nm8na6tu" path="res://Scenes/jogador.tscn" id="2_31777"]
+[ext_resource type="PackedScene" uid="uid://q3y0m588t0b7" path="res://Scenes/hud.tscn" id="4_2v0rm"]
+[ext_resource type="PackedScene" uid="uid://dhfbda6eqroxf" path="res://Scenes/ovos.tscn" id="4_7gnmr"]
 
 [node name="main" type="Node"]
 
@@ -13,10 +15,23 @@ position = Vector2(3833, 2123)
 scale = Vector2(4, 4)
 texture = ExtResource("1_lq8wu")
 
-[node name="Celeiro" type="Sprite2D" parent="TileLayers"]
-position = Vector2(899, 29)
-scale = Vector2(4, 4)
+[node name="StaticBody2D" type="StaticBody2D" parent="TileLayers"]
+position = Vector2(1136, 857)
+scale = Vector2(2.71771, 2.41296)
+
+[node name="Celeiro" type="Sprite2D" parent="TileLayers/StaticBody2D"]
+position = Vector2(-58.1372, -120.599)
 texture = ExtResource("2_2ip7f")
 
 [node name="jogador" parent="." instance=ExtResource("2_31777")]
-position = Vector2(1121, 1982)
+position = Vector2(1119, 1419)
+scale = Vector2(0.8, 0.8)
+safe_margin = 0.001
+
+[node name="HUD" parent="." instance=ExtResource("4_2v0rm")]
+scale = Vector2(10, 10)
+transform = Transform2D(10, 0, 0, 10, 0, 0)
+
+[node name="ovos2" parent="." instance=ExtResource("4_7gnmr")]
+position = Vector2(3967.31, 2455)
+scale = Vector2(15, 15)
