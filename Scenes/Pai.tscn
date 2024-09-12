@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://rtyoohjlqhr8"]
+
+[ext_resource type="Texture2D" uid="uid://0ahgn0c4uvh4" path="res://Assets/sprites/Personagens/Pai/pai do mininu.png" id="1_1gv3g"]
+[ext_resource type="Script" path="res://Script/pai.gd" id="1_wh8o0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m4meh"]
+radius = 120.0
+height = 352.0
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_wh8o0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_1gv3g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_m4meh")

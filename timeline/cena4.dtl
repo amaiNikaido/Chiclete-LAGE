@@ -1,0 +1,19 @@
+[voice path="res://Assets/audio/dialogo(alien).mp3" volume="0.0"]
+pai2: Trouxe mais gemas?
+pai2: Dê elas para seu progenitor!
+pai2: Dê!
+[voice path="res://Assets/audio/dialogo(alien).mp3" volume="0.0"]
+p(@NSFIJoO+N#O&FyglgKSo$PP5e$e
+pai2: Muito bem, muito bem.
+pai2: Finalmente meus ovos todos reunidos!
+pai2: Sim, sim. O tempo todo que eu falava gemas eu me referia a gemas de ovos! Meus ovos!
+pai2: E agora eu poderei alimentá-los! E sabe quem é o prato principal?!
+- Sim
+	[voice path="res://Assets/audio/dialogo(alien).mp3" volume="0.0"]
+	pai2: Isso mesmo! Você.
+- Não
+	[voice path="res://Assets/audio/dialogo(alien).mp3" volume="0.0"]
+	pai2: Você!!!
+- _&o
+	[voice path="res://Assets/audio/dialogo(alien).mp3" volume="0.0"]
+	5^MI9X7K4*f7RT!UjPNveV

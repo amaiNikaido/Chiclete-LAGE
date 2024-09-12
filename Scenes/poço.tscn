@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj55aatjo3oou"]
+
+[ext_resource type="Script" path="res://Script/poço.gd" id="1_7noqd"]
+[ext_resource type="Texture2D" uid="uid://cxr4nrph4yt1j" path="res://Assets/sprites/Tileset/poço.png" id="2_1evkw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sfrns"]
+radius = 153.883
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_7noqd")
+
+[node name="Poço" type="Sprite2D" parent="."]
+position = Vector2(-2, -1)
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("2_1evkw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11, 38)
+shape = SubResource("CircleShape2D_sfrns")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nhhpt5y7i4le"
-path="res://.godot/imported/Árvores.png-f565c89c9026930fea6f06ca29425991.ctex"
+uid="uid://eti74b6jkepw"
+path="res://.godot/imported/Planta (12).png-e6405c20091688691f8cb0e792b85c6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Tileset/Árvores.png"
-dest_files=["res://.godot/imported/Árvores.png-f565c89c9026930fea6f06ca29425991.ctex"]
+source_file="res://Assets/sprites/Tileset/Planta (12).png"
+dest_files=["res://.godot/imported/Planta (12).png-e6405c20091688691f8cb0e792b85c6d.ctex"]
 
 [params]
 

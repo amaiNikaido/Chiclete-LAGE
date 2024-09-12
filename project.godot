@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ciclete-LAGE"
-run/main_scene="res://Scenes/fase_0.tscn"
+run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
@@ -23,18 +23,26 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"galinha": "res://timeline/galinha.dch",
-"galinha2": "res://timeline/galinha2.dch",
+"luquinhas": "res://timeline/luquinhas.dch",
+"pai": "res://timeline/pai.dch",
+"pai2": "res://timeline/pai2.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "cena1": "res://timeline/cena1.dtl",
 "cena2": "res://timeline/cena2.dtl",
 "cena3": "res://timeline/cena3.dtl",
-"introdução": "res://timeline/introdução.dtl"
+"cena3_1": "res://timeline/cena3_1.dtl",
+"cena4": "res://timeline/cena4.dtl",
+"dica": "res://timeline/dica.dtl",
+"dica1": "res://timeline/dica1.dtl",
+"dica2": "res://timeline/dica2.dtl",
+"reclamando": "res://timeline/reclamando.dtl",
+"reclamando2": "res://timeline/reclamando2.dtl",
+"reclamando3": "res://timeline/reclamando3.dtl"
 }
 text/letter_speed=0.01
-text/initial_text_reveal_skippable=true
+text/initial_text_reveal_skippable=false
 text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1
 text/autoadvance_per_character_delay=0.1
@@ -59,6 +67,10 @@ translation/translation_folder=""
 translation/save_mode=0
 translation/add_separator=false
 glossary/default_case_sensitive=true
+variables={}
+timer/process_in_physics=false
+text/autoadvance_enabled=false
+text/absolute_autopauses=false
 
 [display]
 
@@ -108,7 +120,7 @@ dialogic_default_action={
 
 2d_physics/layer_1="Jogador"
 2d_physics/layer_2="Mundo"
-2d_physics/layer_3="Decoração"
+2d_physics/layer_3="Acionavel"
 2d_physics/layer_4="Ovos"
 
 [rendering]

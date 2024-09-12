@@ -1,17 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://q3y0m588t0b7"]
+[gd_scene load_steps=3 format=3 uid="uid://q3y0m588t0b7"]
 
 [ext_resource type="Script" path="res://Script/control.gd" id="1_is78p"]
-[ext_resource type="Texture2D" uid="uid://dmo2oktjhoyfx" path="res://Assets/sprites/coisas do exemplo/hud exemplo2.png" id="2_2jcnp"]
-[ext_resource type="Texture2D" uid="uid://cub6f2k88pg24" path="res://Assets/sprites/coisas do exemplo/hud exemplo.png" id="3_vusmo"]
-[ext_resource type="Texture2D" uid="uid://cooiim17rov10" path="res://Assets/sprites/coisas do exemplo/hud exemplo1.png" id="4_girii"]
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_a05qe"]
-frames = 3
-frame_0/texture = ExtResource("2_2jcnp")
-frame_1/texture = ExtResource("3_vusmo")
-frame_1/duration = 1.0
-frame_2/texture = ExtResource("4_girii")
-frame_2/duration = 1.0
+[ext_resource type="Texture2D" uid="uid://cjjr0hkcas2l2" path="res://Assets/sprites/gemas/Gemas (4).png" id="2_622wj"]
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -43,16 +33,15 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="ovos_icon" type="TextureRect" parent="Control/MarginContainer/ovos_container"]
+[node name="gema" type="TextureRect" parent="Control/MarginContainer/ovos_container"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-texture = SubResource("AnimatedTexture_a05qe")
+texture = ExtResource("2_622wj")
+expand_mode = 2
 
 [node name="contador_ovos" type="Label" parent="Control/MarginContainer/ovos_container"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 5
+theme_override_font_sizes/font_size = 100
 text = "000"

@@ -1,8 +1,72 @@
-[gd_scene load_steps=4 format=3 uid="uid://djoda8lteky0i"]
+[gd_scene load_steps=36 format=3 uid="uid://djoda8lteky0i"]
 
 [ext_resource type="Texture2D" uid="uid://c831efo1b0wot" path="res://Assets/sprites/Tileset/cenario.png" id="1_lq8wu"]
 [ext_resource type="Texture2D" uid="uid://bujrvuj6fkiky" path="res://Assets/sprites/Tileset/celeiro.png" id="2_2ip7f"]
 [ext_resource type="PackedScene" uid="uid://bcmm2nm8na6tu" path="res://Scenes/jogador.tscn" id="2_31777"]
+[ext_resource type="Texture2D" uid="uid://1gbf61yk80nw" path="res://Assets/sprites/Tileset/Árvore (3).png" id="3_qfrfe"]
+[ext_resource type="Texture2D" uid="uid://ob6t7qycy8i5" path="res://Assets/sprites/Tileset/plantação (chao).png" id="3_x2868"]
+[ext_resource type="Texture2D" uid="uid://6mdd364nbny4" path="res://Assets/sprites/Tileset/Árvore (6).png" id="4_dtoln"]
+[ext_resource type="Texture2D" uid="uid://djhh10t76kcd1" path="res://Assets/sprites/Tileset/Planta (5).png" id="4_pe0tf"]
+[ext_resource type="PackedScene" uid="uid://q3y0m588t0b7" path="res://Scenes/hud.tscn" id="4_viwb0"]
+[ext_resource type="Texture2D" uid="uid://cucocsqeemqcn" path="res://Assets/sprites/Tileset/Planta (3).png" id="5_clode"]
+[ext_resource type="Texture2D" uid="uid://eti74b6jkepw" path="res://Assets/sprites/Tileset/Planta (12).png" id="6_au1n4"]
+[ext_resource type="Texture2D" uid="uid://bwi36gio1py2l" path="res://Assets/sprites/Tileset/Planta (8).png" id="7_dbxy2"]
+[ext_resource type="Texture2D" uid="uid://bot3acjpwfv0q" path="res://Assets/sprites/Tileset/Planta (1).png" id="8_cgyhh"]
+[ext_resource type="Texture2D" uid="uid://uqrqe0qyi8xw" path="res://Assets/sprites/Tileset/Cratera (1).png" id="12_fggnv"]
+[ext_resource type="PackedScene" uid="uid://dhfbda6eqroxf" path="res://Scenes/ovos.tscn" id="14_igygx"]
+[ext_resource type="PackedScene" uid="uid://bslmluar3vb70" path="res://Scenes/inicio.tscn" id="16_7awgr"]
+[ext_resource type="Texture2D" uid="uid://lvvbkeggfd1e" path="res://Assets/sprites/Tileset/poço com balde.png" id="17_fycwv"]
+[ext_resource type="PackedScene" uid="uid://rtyoohjlqhr8" path="res://Scenes/Pai.tscn" id="17_sgsrs"]
+[ext_resource type="PackedScene" uid="uid://cj55aatjo3oou" path="res://Scenes/poço.tscn" id="18_y7ve8"]
+[ext_resource type="AudioStream" uid="uid://2avfp4jdjrpo" path="res://Assets/audio/sons_natureza.mp3" id="19_ie4b5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mrra7"]
+radius = 68.884
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1m681"]
+size = Vector2(1123, 117)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcmbn"]
+size = Vector2(125, 826.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hcgj1"]
+size = Vector2(325, 677.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uks5q"]
+size = Vector2(1484, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y63p2"]
+size = Vector2(253, 560)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ph1n1"]
+size = Vector2(464.5, 370)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d50xb"]
+size = Vector2(398.5, 353)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ys02q"]
+size = Vector2(2368, 498)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aujbc"]
+size = Vector2(332.5, 289.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4atw"]
+size = Vector2(444, 700)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ytwa5"]
+size = Vector2(5417.5, 155.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejm8d"]
+size = Vector2(1246.5, 592.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwuyr"]
+size = Vector2(440, 2388)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oj1xo"]
+size = Vector2(383, 526)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g147r"]
+radius = 462.027
 
 [node name="main" type="Node"]
 
@@ -13,10 +77,867 @@ position = Vector2(3833, 2123)
 scale = Vector2(4, 4)
 texture = ExtResource("1_lq8wu")
 
+[node name="Cratera(1)" type="Sprite2D" parent="TileLayers/Cenario"]
+position = Vector2(-646.75, 266.5)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_fggnv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileLayers/Cenario/Cratera(1)"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/Cenario/Cratera(1)/StaticBody2D"]
+position = Vector2(1, -2)
+shape = SubResource("CircleShape2D_mrra7")
+
+[node name="Cratera(1)2" type="Sprite2D" parent="TileLayers/Cenario"]
+position = Vector2(483.75, -230.75)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_fggnv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileLayers/Cenario/Cratera(1)2"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/Cenario/Cratera(1)2/StaticBody2D"]
+shape = SubResource("CircleShape2D_mrra7")
+
 [node name="Celeiro" type="Sprite2D" parent="TileLayers"]
 position = Vector2(899, 29)
 scale = Vector2(4, 4)
 texture = ExtResource("2_2ip7f")
 
+[node name="Plantação(chao)" type="Sprite2D" parent="TileLayers"]
+position = Vector2(3005, 2931)
+scale = Vector2(1.67315, 1.67315)
+texture = ExtResource("3_x2868")
+
+[node name="Planta(5)" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-524.759, -261.782)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("4_pe0tf")
+
+[node name="Planta(5)2" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-508.024, -103.996)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("4_pe0tf")
+
+[node name="Planta(5)3" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-548.666, 37.0558)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("4_pe0tf")
+
+[node name="Planta(5)4" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-512.806, 166.154)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("4_pe0tf")
+
+[node name="Planta(5)5" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-567.792, 268.954)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("4_pe0tf")
+
+[node name="Planta(3)" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-16.735, -280.908)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("5_clode")
+
+[node name="Planta(3)2" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-16.735, -194.842)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("5_clode")
+
+[node name="Planta(3)3" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-21.5164, -94.433)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("5_clode")
+
+[node name="Planta(3)4" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-28.6885, 20.3208)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("5_clode")
+
+[node name="Planta(3)5" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-35.8606, 156.591)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("5_clode")
+
+[node name="Planta(3)6" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-28.6885, 261.782)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("5_clode")
+
+[node name="Planta(12)" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-277.322, -266.563)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("6_au1n4")
+
+[node name="Planta(12)2" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-255.805, -92.0422)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("6_au1n4")
+
+[node name="Planta(12)3" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-289.275, 58.572)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("6_au1n4")
+
+[node name="Planta(12)4" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(-277.322, 240.266)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("6_au1n4")
+
+[node name="Planta(8)" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(459.015, -264.173)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("7_dbxy2")
+
+[node name="Planta(8)2" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(518.782, -106.386)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("7_dbxy2")
+
+[node name="Planta(8)3" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(509.22, 65.7441)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("7_dbxy2")
+
+[node name="Planta(8)4" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(468.578, 225.921)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("7_dbxy2")
+
+[node name="Planta(1)" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(224.726, -249.829)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("8_cgyhh")
+
+[node name="Planta(1)2" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(234.289, -111.168)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("8_cgyhh")
+
+[node name="Planta(1)5" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(234.289, -111.168)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("8_cgyhh")
+
+[node name="Planta(1)3" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(229.507, 29.8837)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("8_cgyhh")
+
+[node name="Planta(1)4" type="Sprite2D" parent="TileLayers/Plantação(chao)"]
+position = Vector2(231.898, 178.107)
+scale = Vector2(0.597676, 0.597676)
+texture = ExtResource("8_cgyhh")
+
+[node name="frente aoora" type="Node2D" parent="TileLayers"]
+
+[node name="Árvore(3)33" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(304, 2660)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)34" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(737, 2906)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)35" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(405, 3211)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)36" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(710, 3229)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)37" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(403, 2910)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)38" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(737, 2906)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)39" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(405, 3211)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)40" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(710, 3229)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)41" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(2073, 1087)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)42" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(342, 1119)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)43" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(-18, 1262)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)44" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(315, 1442)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)17" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(423, 3526)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)18" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(728, 3544)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)19" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(989, 3526)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)20" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(1330, 3562)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)21" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(1572, 3580)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)22" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(1877, 3598)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)23" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(2138, 3580)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)24" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(2479, 3616)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)25" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(2821, 3571)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)26" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(3126, 3589)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)27" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(3387, 3571)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)28" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(3728, 3607)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)29" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(3970, 3625)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)30" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(4275, 3643)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)31" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(4536, 3625)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)45" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(5306, 3569)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)46" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(5548, 3587)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)47" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(5853, 3605)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)48" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(6114, 3587)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)49" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(5155, 3856)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)50" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(5397, 3874)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)51" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(5702, 3892)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)52" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(5963, 3874)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)53" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(6348, 3018)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)60" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(6295, 3811)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)54" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(6590, 3036)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)55" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(6895, 3054)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)57" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(6340, 3343)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)58" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(6582, 3361)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)59" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(6887, 3379)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)56" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(7156, 3036)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)32" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(4877, 3661)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(396, 3849)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)2" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(701, 3867)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)61" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(6589, 3637)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)3" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(962, 3849)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)4" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(1303, 3885)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)5" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(1545, 3903)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)6" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(1850, 3921)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)7" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(2111, 3903)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)8" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(2452, 3939)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)9" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(2794, 3894)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)10" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(3099, 3912)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)11" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(3360, 3894)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)12" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(3701, 3930)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)13" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(3943, 3948)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)14" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(4248, 3966)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)15" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(4509, 3948)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)16" type="Sprite2D" parent="TileLayers/frente aoora"]
+position = Vector2(4850, 3984)
+texture = ExtResource("3_qfrfe")
+
+[node name="Arvores" type="Node2D" parent="TileLayers"]
+
+[node name="Árvore(6)3" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(3363, -42)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(2120, -28)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)2" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(2939, -38)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)4" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(3810, -40)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)5" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(2515, -35)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)6" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(4264, -42)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)7" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(4675, -49)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)8" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(5085, -56)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)37" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(2357.5, 4115)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)38" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(1933.5, 4119)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)39" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(2804.5, 4117)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)40" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(1509.5, 4122)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)41" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(3258.5, 4115)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)42" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(3669.5, 4108)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)45" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(-20, 1528)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)47" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(295, 4157)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)48" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(703.5, 4145)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)49" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(1114.5, 4138)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)43" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(4079.5, 4101)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)9" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(5569, -63)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)10" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(6033, -76)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)11" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(6477, -69)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)12" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(6921, -69)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)13" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7338, -82)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)14" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7480, 133)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)15" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7533, 463)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)17" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7513, 793)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)16" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7527, 1109)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)18" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7527, 1479)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)19" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7500, 1815)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)20" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7527, 2212)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)21" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7540, 2595)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)22" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7540, 2992)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)23" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7540, 2992)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)24" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7534, 3374)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)52" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(4, 1870)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)53" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(-1, 2181)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)54" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(17, 2527)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)46" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(76, -73)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)58" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(-44, 172)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)59" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(-27, 483)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)60" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(-36, 787)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)55" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(39, 2860)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)56" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(44, 3212)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)57" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(49, 3583)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)25" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7530, 3754)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)26" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7526, 4146)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)27" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7158, 3398)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)28" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7162, 3734)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)29" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(7126, 4098)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)30" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(6746, 3730)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)31" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(6722, 4086)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)32" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(6318, 4122)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)33" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(5838, 4098)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)34" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(5366, 4062)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)35" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(4914, 4082)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)44" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(45, 3956)
+texture = ExtResource("4_dtoln")
+
+[node name="Árvore(6)36" type="Sprite2D" parent="TileLayers/Arvores"]
+position = Vector2(4502, 4078)
+texture = ExtResource("4_dtoln")
+
+[node name="arvores frente" type="Node2D" parent="TileLayers"]
+
+[node name="Árvore(3)62" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(2284, 274)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)63" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(2545, 256)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)64" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(2886, 292)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)69" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(4377, 301)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)70" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(4682, 319)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)71" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(4943, 301)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)72" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(5284, 337)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)73" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(5526, 355)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)74" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(5831, 373)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)75" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(6092, 355)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)76" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(6862, 299)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)77" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(7104, 317)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)80" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(6433, 391)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)82" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(2518, 579)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)78" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(6711, 586)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)79" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(6953, 604)
+texture = ExtResource("3_qfrfe")
+
+[node name="Árvore(3)81" type="Sprite2D" parent="TileLayers/arvores frente"]
+position = Vector2(2257, 597)
+texture = ExtResource("3_qfrfe")
+
+[node name="Cratera(1)" type="Sprite2D" parent="TileLayers"]
+position = Vector2(3697, 840)
+scale = Vector2(3.90017, 3.90017)
+texture = ExtResource("12_fggnv")
+
+[node name="collisões" type="Node2D" parent="TileLayers"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D"]
+light_mask = 2
+position = Vector2(3616.5, 158.5)
+shape = SubResource("RectangleShape2D_1m681")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D2"]
+position = Vector2(143, 2063.25)
+shape = SubResource("RectangleShape2D_dcmbn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D2"]
+position = Vector2(1569, 974)
+shape = SubResource("RectangleShape2D_dcmbn")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D3"]
+position = Vector2(354.5, 1369.75)
+shape = SubResource("RectangleShape2D_hcgj1")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D4"]
+position = Vector2(1275, 1143.5)
+shape = SubResource("RectangleShape2D_uks5q")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D5"]
+position = Vector2(2147.5, 1069)
+shape = SubResource("RectangleShape2D_y63p2")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D6"]
+position = Vector2(2486.75, 660)
+shape = SubResource("RectangleShape2D_ph1n1")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D8"]
+position = Vector2(2867.75, 374.5)
+shape = SubResource("RectangleShape2D_d50xb")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D7"]
+position = Vector2(5379, 344)
+shape = SubResource("RectangleShape2D_ys02q")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D13"]
+position = Vector2(330.75, 2590.25)
+shape = SubResource("RectangleShape2D_aujbc")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D12"]
+position = Vector2(686, 3031)
+shape = SubResource("RectangleShape2D_f4atw")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D11"]
+position = Vector2(3547.25, 3438.25)
+shape = SubResource("RectangleShape2D_ytwa5")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D10"]
+position = Vector2(6822.75, 3097.75)
+shape = SubResource("RectangleShape2D_ejm8d")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D10"]
+position = Vector2(7166, 535)
+shape = SubResource("RectangleShape2D_ejm8d")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D9"]
+position = Vector2(7597, 1629)
+shape = SubResource("RectangleShape2D_kwuyr")
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D14"]
+position = Vector2(6873, 1240)
+shape = SubResource("RectangleShape2D_oj1xo")
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="TileLayers/collisões"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D15"]
+position = Vector2(3705, 833)
+shape = SubResource("CircleShape2D_g147r")
+
+[node name="HUD" parent="." instance=ExtResource("4_viwb0")]
+
+[node name="Colisão" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ovos_no" type="Node2D" parent="."]
+
+[node name="ovos" parent="ovos_no" instance=ExtResource("14_igygx")]
+position = Vector2(5774, 1136)
+
+[node name="ovos2" parent="ovos_no" instance=ExtResource("14_igygx")]
+position = Vector2(1244, 3114)
+
+[node name="Inicio" parent="." instance=ExtResource("16_7awgr")]
+
+[node name="Pai?" parent="." instance=ExtResource("17_sgsrs")]
+position = Vector2(1572, 1233)
+monitoring = false
+
+[node name="PoçoComBalde" type="Sprite2D" parent="."]
+position = Vector2(6880, 1271)
+texture = ExtResource("17_fycwv")
+
+[node name="Area2D" parent="." instance=ExtResource("18_y7ve8")]
+position = Vector2(6889, 1248)
+scale = Vector2(4, 4)
+
+[node name="musica" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="musica"]
+stream = ExtResource("19_ie4b5")
+volume_db = -15.0
+pitch_scale = 0.4
+autoplay = true
+
 [node name="jogador" parent="." instance=ExtResource("2_31777")]
-position = Vector2(1121, 1982)
+position = Vector2(1099, 1408)

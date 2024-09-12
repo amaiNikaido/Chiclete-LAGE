@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bcmm2nm8na6tu"]
+[gd_scene load_steps=18 format=3 uid="uid://bcmm2nm8na6tu"]
 
 [ext_resource type="Script" path="res://Script/jogador.gd" id="1_yvdgx"]
 [ext_resource type="Texture2D" uid="uid://cn1d74uqmyqw4" path="res://Assets/sprites/Personagens/Luquinhas/luquinhas_andando_frente2.png" id="2_ygskg"]
@@ -109,6 +109,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0c2ot"]
 size = Vector2(160, 208)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_tfjfm"]
+radius = 159.013
+
 [node name="jogador" type="CharacterBody2D"]
 collision_mask = 14
 script = ExtResource("1_yvdgx")
@@ -117,16 +120,26 @@ script = ExtResource("1_yvdgx")
 position = Vector2(-1, 4)
 scale = Vector2(0.257324, 0.257324)
 sprite_frames = SubResource("SpriteFrames_5twqj")
-animation = &"andando_esquerda"
+animation = &"parado_direita"
 autoplay = "parado_baixo"
-frame_progress = 0.301103
 script = ExtResource("14_qykcg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_0c2ot")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
+limit_right = 7620
+limit_bottom = 3700
+
+[node name="Direção" type="Marker2D" parent="."]
+
+[node name="BuscaAcionaveis" type="Area2D" parent="Direção"]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direção/BuscaAcionaveis"]
+position = Vector2(-3, 0)
+shape = SubResource("CircleShape2D_tfjfm")

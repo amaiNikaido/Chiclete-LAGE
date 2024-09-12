@@ -8,22 +8,12 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "galinha2",
+"default_portrait": "",
 "description": "",
-"display_name": "galinha2",
+"display_name": "Pai",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, -100),
-"portraits": {
-"galinha2": {
-"export_overrides": {
-"image": "\"res://Assets/sprites/coisas do exemplo/receba.jpg\""
-},
-"mirror": false,
 "offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-}
-},
-"scale": 0.7
+"portraits": {},
+"scale": 1.0
 }

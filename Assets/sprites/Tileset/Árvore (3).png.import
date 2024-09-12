@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j005gehljb8g"
-path="res://.godot/imported/Galinhas_Sprites.png-a5218921f12512da8e40bfaa7464a87f.ctex"
+uid="uid://1gbf61yk80nw"
+path="res://.godot/imported/Árvore (3).png-f5667b2dafe9b292e23b9bcad1800b8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Personagens/Animais/Galinhas_Sprites.png"
-dest_files=["res://.godot/imported/Galinhas_Sprites.png-a5218921f12512da8e40bfaa7464a87f.ctex"]
+source_file="res://Assets/sprites/Tileset/Árvore (3).png"
+dest_files=["res://.godot/imported/Árvore (3).png-f5667b2dafe9b292e23b9bcad1800b8d.ctex"]
 
 [params]
 

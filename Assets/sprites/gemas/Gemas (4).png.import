@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sr4ap8lnc022"
-path="res://.godot/imported/Ovelhas_Sprites.png-df9c62f1bbc2344f49fc821b74b59d8d.ctex"
+uid="uid://cjjr0hkcas2l2"
+path="res://.godot/imported/Gemas (4).png-4a3b158828a97912b2fc35542b8dda66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Personagens/Animais/Ovelhas_Sprites.png"
-dest_files=["res://.godot/imported/Ovelhas_Sprites.png-df9c62f1bbc2344f49fc821b74b59d8d.ctex"]
+source_file="res://Assets/sprites/gemas/Gemas (4).png"
+dest_files=["res://.godot/imported/Gemas (4).png-4a3b158828a97912b2fc35542b8dda66.ctex"]
 
 [params]
 
