@@ -107,7 +107,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0c2ot"]
-size = Vector2(160, 208)
+size = Vector2(126.5, 198)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tfjfm"]
 radius = 159.013
@@ -125,7 +125,7 @@ autoplay = "parado_baixo"
 script = ExtResource("14_qykcg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
+position = Vector2(-4.25, 21)
 shape = SubResource("RectangleShape2D_0c2ot")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -141,5 +141,4 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direção/BuscaAcionaveis"]
-position = Vector2(-3, 0)
 shape = SubResource("CircleShape2D_tfjfm")

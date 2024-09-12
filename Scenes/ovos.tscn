@@ -9,6 +9,7 @@ radius = 104.0
 height = 274.0
 
 [node name="ovos" type="Area2D"]
+scale = Vector2(0.625, 0.625)
 collision_layer = 8
 script = ExtResource("1_8bfj2")
 
