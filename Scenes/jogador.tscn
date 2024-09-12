@@ -22,28 +22,22 @@ animations = [{
 "texture": ExtResource("2_ygskg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_gbbou")
-}, {
-"duration": 1.0,
 "texture": ExtResource("3_njgyi")
 }],
 "loop": true,
 "name": &"andando_baixo",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_2wvat")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_ksu6u")
-}, {
-"duration": 1.0,
 "texture": ExtResource("5_a82ds")
 }],
 "loop": true,
 "name": &"andando_cima",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -54,10 +48,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_eru0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_a5gek")
 }],
 "loop": true,
 "name": &"andando_direita",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -68,10 +65,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_oicn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vpyqq")
 }],
 "loop": true,
 "name": &"andando_esquerda",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -120,8 +120,9 @@ script = ExtResource("1_yvdgx")
 position = Vector2(-1, 4)
 scale = Vector2(0.257324, 0.257324)
 sprite_frames = SubResource("SpriteFrames_5twqj")
-animation = &"parado_direita"
+animation = &"andando_esquerda"
 autoplay = "parado_baixo"
+frame_progress = 0.219154
 script = ExtResource("14_qykcg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
