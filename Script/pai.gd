@@ -1,4 +1,15 @@
 extends Area2D
+@onready var spriteAlien = $Sprite2D
+@onready var musica = $"../musica/AudioStreamPlayerMusica"
+
+func _ready():
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+func _on_dialogic_signal(argument:String):
+	if argument == "change":
+		musica.stop()
+		spriteAlien.texture = load("res://Assets/sprites/Personagens/Pai/Untitled_Artwork.png")
+		spriteAlien.scale = Vector2(1.01, 1.01)
 
 func action():
 	if Globais.ovos == 0 && Globais.dialogo_1:

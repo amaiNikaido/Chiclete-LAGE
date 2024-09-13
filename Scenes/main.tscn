@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://djoda8lteky0i"]
+[gd_scene load_steps=73 format=3 uid="uid://djoda8lteky0i"]
 
 [ext_resource type="Texture2D" uid="uid://c831efo1b0wot" path="res://Assets/sprites/Tileset/cenario.png" id="1_lq8wu"]
 [ext_resource type="Texture2D" uid="uid://bujrvuj6fkiky" path="res://Assets/sprites/Tileset/celeiro.png" id="2_2ip7f"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://b840iw84wcvft" path="res://Assets/sprites/Tileset/Matinhos (13).png" id="25_ed4rx"]
 [ext_resource type="Texture2D" uid="uid://bet0oxu6rqpjt" path="res://Assets/sprites/Tileset/pá.png" id="25_varlu"]
 [ext_resource type="Texture2D" uid="uid://c02elsq4575d4" path="res://Assets/sprites/Tileset/balde.png" id="26_81s47"]
+[ext_resource type="AudioStream" uid="uid://bksfwvs8e8ly2" path="res://Assets/audio/música1(menu_).mp3" id="37_uk755"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uks5q"]
 size = Vector2(1480, 935.5)
@@ -57,10 +58,25 @@ radius = 168.0
 size = Vector2(144.985, 38.5082)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifggm"]
-size = Vector2(290.5, 424)
+size = Vector2(274, 424)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_al804"]
-size = Vector2(302.5, 370.5)
+size = Vector2(283.5, 370.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2a5f8"]
+size = Vector2(54.625, 220.108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q8tl"]
+size = Vector2(21.5, 180.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_naxr4"]
+size = Vector2(34.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1aspu"]
+size = Vector2(42.3567, 174.787)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7cnx"]
+size = Vector2(22.5, 126)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g147r"]
 radius = 462.027
@@ -90,7 +106,7 @@ size = Vector2(137, 145)
 size = Vector2(1242.53, 232.314)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejm8d"]
-size = Vector2(1591, 432.125)
+size = Vector2(1330, 432.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwuyr"]
 size = Vector2(1081, 218)
@@ -109,6 +125,15 @@ size = Vector2(240.005, 1599.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e742e"]
 size = Vector2(940.784, 191.466)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcjdi"]
+size = Vector2(127.483, 308.902)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6bvi"]
+size = Vector2(187.466, 208.545)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4p7p"]
+size = Vector2(224, 90.9865)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c847m"]
 size = Vector2(162.222, 261.667)
@@ -814,12 +839,35 @@ texture = ExtResource("11_pyfkt")
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/Casa/StaticBody2D"]
-position = Vector2(-43.75, -126.5)
+position = Vector2(-35.5, -126.5)
 shape = SubResource("RectangleShape2D_ifggm")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TileLayers/Casa/StaticBody2D"]
-position = Vector2(141.25, -152.25)
+position = Vector2(131.75, -152.25)
 shape = SubResource("RectangleShape2D_al804")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TileLayers/Casa/StaticBody2D"]
+position = Vector2(280, -223.774)
+rotation = -0.279253
+shape = SubResource("RectangleShape2D_2a5f8")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TileLayers/Casa/StaticBody2D"]
+position = Vector2(280.75, -57.75)
+shape = SubResource("RectangleShape2D_2q8tl")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="TileLayers/Casa/StaticBody2D"]
+position = Vector2(303.25, -110.5)
+shape = SubResource("RectangleShape2D_naxr4")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="TileLayers/Casa/StaticBody2D"]
+position = Vector2(-168.823, -249.301)
+rotation = 0.20944
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_1aspu")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="TileLayers/Casa/StaticBody2D"]
+position = Vector2(-177.75, 22.5)
+shape = SubResource("RectangleShape2D_j7cnx")
 
 [node name="Árvores cosmeticas" type="Node2D" parent="TileLayers"]
 
@@ -1409,7 +1457,7 @@ shape = SubResource("CircleShape2D_g147r")
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D2"]
-position = Vector2(-22.5, 2140)
+position = Vector2(-22.5, 2139)
 shape = SubResource("RectangleShape2D_dcmbn")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D2"]
@@ -1437,11 +1485,11 @@ position = Vector2(2551, 619)
 shape = SubResource("RectangleShape2D_f4atw")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D2"]
-position = Vector2(3905.74, 131.157)
+position = Vector2(3908, 55)
 shape = SubResource("RectangleShape2D_2dl06")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D2"]
-position = Vector2(2502.5, 216.938)
+position = Vector2(2372, 216.938)
 shape = SubResource("RectangleShape2D_ejm8d")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D2"]
@@ -1468,6 +1516,18 @@ shape = SubResource("RectangleShape2D_2dpx3")
 position = Vector2(5690.61, 618.267)
 shape = SubResource("RectangleShape2D_e742e")
 
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D2"]
+position = Vector2(3072.26, 167.451)
+shape = SubResource("RectangleShape2D_jcjdi")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D2"]
+position = Vector2(3210.73, 119.273)
+shape = SubResource("RectangleShape2D_l6bvi")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="TileLayers/collisões/StaticBody2D2"]
+position = Vector2(4215, 214)
+shape = SubResource("RectangleShape2D_k4p7p")
+
 [node name="Colisão" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -1478,11 +1538,11 @@ offset_bottom = 40.0
 
 [node name="ovos" parent="ovos_no" instance=ExtResource("14_igygx")]
 modulate = Color(0.25098, 0.847059, 0.0941176, 1)
-position = Vector2(2131, 3148)
+position = Vector2(2128, 3147)
 
 [node name="ovos2" parent="ovos_no" instance=ExtResource("14_igygx")]
 modulate = Color(0.866112, 0.18832, 0.166696, 1)
-position = Vector2(199, 374)
+position = Vector2(207, 387)
 
 [node name="Pai?" parent="." instance=ExtResource("17_sgsrs")]
 position = Vector2(4056, 690)
@@ -1515,11 +1575,17 @@ shape = SubResource("RectangleShape2D_oj1xo")
 
 [node name="musica" type="Node2D" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="musica"]
+[node name="AudioStreamPlayerAmbiance" type="AudioStreamPlayer" parent="musica"]
 stream = ExtResource("19_ie4b5")
 volume_db = -5.0
 pitch_scale = 0.4
 autoplay = true
+
+[node name="AudioStreamPlayerMusica" type="AudioStreamPlayer" parent="musica"]
+stream = ExtResource("37_uk755")
+volume_db = 1.0
+autoplay = true
+parameters/looping = false
 
 [node name="jogador" parent="." instance=ExtResource("2_31777")]
 position = Vector2(3674, 975)
